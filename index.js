@@ -1,4 +1,4 @@
-const http = require('http')
+/*const http = require('http')
 
 const hostname = '127.0.0.1'
 const port = 7000
@@ -24,4 +24,19 @@ const server = http.createServer((req, res) => {
 
 server.listen(port, hostname, () => {
     console.log(`SERVER STARTED ON http://${hostname}:${port}`)
+})*/
+
+const express = require("express")
+const app = express()
+
+const static = express.static('Static')
+
+app.use(static)
+
+/*app.get('/', function(req,res){
+    res.send("KAYE RA SETTINGA!!")
+})*/
+
+app.listen(3000 , () => {
+    console.log(`http://127.0.0.1:3000`)
 })
